@@ -18,7 +18,10 @@ import 'rxjs/Rx';
     <div>
     <ul>
     <li *ngFor = "#user of users">
-    {{user | json}}
+    <a>
+    {{user.avatar_url}}
+    {{user.login}}
+    </a>
     </li>
     </ul>
     </div>

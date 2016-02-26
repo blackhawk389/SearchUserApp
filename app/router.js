@@ -44,7 +44,7 @@ System.register(['angular2/core', 'angular2/platform/browser', 'angular2/common'
                     core_1.Component({
                         selector: 'router',
                         pipes: [],
-                        template: "\n    <div>\n    <form [ngFormModel] = \"searchform\">\n    <input type = 'text' [ngFormControl]= 'input1'/>\n    </form>\n    <button (click) = \"getusers()\">Submit</button>\n    </div>\n    <div>\n    <ul>\n    <li *ngFor = \"#user of users\">\n    {{user | json}}\n    </li>\n    </ul>\n    </div>\n    \n    \n    <router-outlet></router-outlet>\n    \n    ",
+                        template: "\n    <div>\n    <form [ngFormModel] = \"searchform\">\n    <input type = 'text' [ngFormControl]= 'input1'/>\n    </form>\n    <button (click) = \"getusers()\">Submit</button>\n    </div>\n    <div>\n    <ul>\n    <li *ngFor = \"#user of users\">\n    <a>\n    {{user.avatar_url}}\n    {{user.login}}\n    </a>\n    </li>\n    </ul>\n    </div>\n    \n    \n    <router-outlet></router-outlet>\n    \n    ",
                         directives: [common_1.FORM_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [http_1.Http, common_1.FormBuilder])
